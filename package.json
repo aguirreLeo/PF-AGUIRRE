@@ -1,0 +1,27 @@
+{
+  "name": "preentrega2-aguirre",
+  "version": "1.0.0",
+  "description": "En este proyecto vamos a ver aplicado los conceptos vistos con SASS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aguirreLeo/repo-proyecto-git.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "almacen",
+    "saludable",
+    "coderhouse",
+    "node"
+  ],
+  "author": "aguirreLeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aguirreLeo/repo-proyecto-git/issues"
+  },
+  "homepage": "https://github.com/aguirreLeo/repo-proyecto-git#readme"
+}
