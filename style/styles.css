@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "chocolates";
+  font-family: "chocolates" !important;
   font-weight: normal;
 }
 
@@ -108,13 +108,19 @@ input.buscador:focus {
   height: 7vh;
 }
 
+.posicion {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 3vw;
-  width: 400px;
 }
 
 .navbar a {
@@ -124,6 +130,14 @@ input.buscador:focus {
   color: black;
   padding: 5px 10px;
   border-radius: 10px;
+}
+
+.bg-custom {
+  background-color: #8f4406 !important;
+}
+
+.container-fluid {
+  width: 100%;
 }
 
 .contenedor-main article .section-img {
@@ -699,7 +713,7 @@ main .quienesSomos img {
   /* estilos en index  */
   .section-info {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -707,7 +721,7 @@ main .quienesSomos img {
   }
   .sectionProductos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 15px;
   }
   .itemsProductos {
@@ -723,6 +737,9 @@ main .quienesSomos img {
   }
   .contenedor-navbar .navbar .buscadorMobile {
     display: none;
+  }
+  .navbar .d-flex {
+    display: none !important;
   }
 }
 @media (max-width: 960px) {
@@ -751,12 +768,23 @@ main .quienesSomos img {
 }
 @media (max-width: 620px) {
   .sectionProductos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     justify-items: center;
     gap: 10px;
   }
   .itemsProductos {
     width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .d-flex {
+    display: flex;
+    margin-left: 10px;
+  }
+  #nav-item1 {
+    margin-top: 10px;
+    margin-left: 10px !important;
+    margin-bottom: 5px;
   }
 }
 
