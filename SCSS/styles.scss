@@ -288,6 +288,7 @@ body {
 .seccionOfertas h2 {
     text-align: center;
     font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 20px;
     color: #333;
 }
@@ -643,9 +644,10 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
     font-size: 1.4rem;
     color: #555;
 }
-@media (max-width: 414px) {
+@media (max-width: 620px) {
     .mainNosotros {
-        padding: 10px;
+        padding: 20px;
+
     }
 
     .contenedorTitulo {
@@ -991,22 +993,7 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
     }
 }
 
-@media (max-width: 620px) {
-    .seccionOfertas {
-        justify-items: center;
-        align-items: center;
-    }
-    .sectionProductos {
-        grid-template-columns: 1fr !important;
-        gap: 10px;
-        width: 100%;
-        height: 100%;
-        max-width: 400px;
-    }
-    .itemsProductos {
-        width: 100%;
-    }
-}
+
 @media (max-width: 768px) {
     .section-info {
         display: grid;
@@ -1094,4 +1081,47 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
     margin: 0
     }
 
+}
+
+@media (max-width: 620px) {
+    .seccionOfertas {
+        justify-items: center;
+        align-items: center;
+    }
+    .seccionOfertas h2 {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    
+
+    .sectionProductos {
+        grid-template-columns: 2, 1fr !important;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        padding: 0;
+    }
+    .itemsProductos {
+        width: 100%;
+    }
+    .itemsProductos img {
+        width: 100%;
+        height: 90px !important;
+    }
+    .info-producto .precio {
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+    }
+    .info-producto h4 {
+        font-size: 1rem;
+    }
+
+    .itemsProductos button {
+        margin: 0;
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
 }
