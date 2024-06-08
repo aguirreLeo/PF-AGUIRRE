@@ -364,7 +364,7 @@ body {
 }
 
 .itemsProductos {
-    background-color: #F0F0F0;
+    background-image: radial-gradient(#fff 50%, #8f4406);
     padding: 15px;
     border-radius: 10px;
     width: 23%;
@@ -450,7 +450,7 @@ body {
 
 /* Estilos para las tarjetas individuales */
 .contenedor-tarj {
-    background-color: #F0F0F0;
+    background-image: radial-gradient(#fff 50%, #8f4406);
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -497,6 +497,7 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
     transition: background-color 0.3s ease;
 }
 
@@ -1052,5 +1053,45 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
         margin-bottom: 5px;
     }
 
+
+}
+
+@media (max-width: 480px) {
+    .contenedor-tarj{
+        height: 250px;
+    }
+    .contenedor-tarj img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0;
+    }
+
+    .detalleProducto {
+        margin: 0;
+        padding: 0;
+    }
+    .contenedor-tarj .info-producto h4 {
+        font-size: 1rem;
+        margin: 0;
+        padding-top: 4px;
+    }
+    .contenedor-tarj .info-producto .precio {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    }
+.contenedor-tarj button {
+    background-color: #c28142;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 0
+    }
 
 }
