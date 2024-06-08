@@ -29,39 +29,55 @@ body {
     height: 120px;
     padding: 5px 3vw;
   }
-  
+
   .header .logo img {
     height: 100px;
     width: auto;
   }
-  
-  .nav-principal {
+
+
+.nav-principal {
     display: flex;
     flex-direction: row;
+    gap: 20px; 
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .header .nav-principal a img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .header .nav-principal .sobreNosotros {
-    font-weight: bold;
-    text-decoration: none;
-    background-color: #8f4406;
-    color: #c28142;
-    padding: 5px 10px;
-    border-radius: 10px;
-  }
-  
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.nav-principal a {
+    text-decoration: none; 
+    color: #343a40; 
+    font-weight: bold; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-principal a:hover {
+    color: #fff; 
+}
+
+.nav-principal img {
+    width: 24px; 
+    height: 24px; 
+    transition: transform 0.3s ease; 
+}
+
+.nav-principal a:hover img {
+    transform: rotate(10deg) scale(1.2); 
+}
+
+
+
+
   .containerBuscador {
     position: relative;
     display: flex;
     align-items: center;
   }
-  
+
   input.buscador {
     width: 350px;
     height: 40px;
@@ -73,17 +89,17 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
   }
-  
+
   input.buscador:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .button {
     background-color: #8f4406;
     border: none;
     border-radius: 0 20px 20px 0;
     padding: 0 20px;
-    margin-left: -1px; 
+    margin-left: -1px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,24 +107,24 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
-  
+
   .button i {
     color: #c28142;
     font-size: 20px;
   }
-  
+
   .button:hover {
     background-color: #a85415;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .contenedor-navbar {
     background-color: #8f4406;
     display: flex;
     flex-direction: row;
     height: 7vh;
   }
- 
+
 .posicion {
     position: sticky;
     top: 0;
@@ -117,31 +133,59 @@ body {
     z-index: 1000;
 }
 
-
-  .navbar {
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-   
-  }
-  
+    transition: background-color 0.3s ease-in-out;
+}
+
 .navbar a {
     font-weight: bold;
     text-decoration: none;
     background-color: #c28142;
-    color: black;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 10px;
-}
-.bg-custom {
-    background-color: #8f4406 !important;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.container-fluid{
+.navbar a:hover {
+    background-color: #a0601d;
+    transform: scale(1.1);
+}
+
+.bg-custom {
+    background-image: linear-gradient(to top, #8f4406, #c28142) !important;
+}
+
+.container-fluid {
     width: 100%;
 }
 
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.form-control {
+    border-radius: 30px;
+}
+
+
+.btn-outline-light {
+    border-radius: 30px;
+}
+
+.posicion {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 
 
@@ -156,22 +200,23 @@ body {
 
 .contenedor-main article .section-img img {
     width: 100%;
-    max-width: 1200px; 
-    height: auto; 
+    max-width: 1200px;
+    height: auto;
     border-radius: 10px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 
 @media (max-width: 768px) {
     .contenedor-main article .section-img {
-        padding: 20px 5vw; 
+        padding: 20px 5vw;
     }
 
     .contenedor-main article .section-img img {
-        height: auto; 
+        height: auto;
     }
 }
+
 
 
 
@@ -208,11 +253,15 @@ body {
 .section-info .tarjetas i {
     color: #8f4406;
     margin-bottom: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2rem;
 }
 
 .section-info .tarjetas h4 {
     font-size: 1.2rem;
-    margin: 10px 0 5px;
+    margin: 0 0 5px;
 }
 
 .section-info .tarjetas p {
@@ -220,21 +269,27 @@ body {
     color: #555;
 }
 
+.section-info #tarjUno i {
+    margin-bottom: 0px;
+
+}
+
+
 /* Estilos para las tarjetas de productos */
 .seccionOfertas {
     background-color: #f8f8f8;
-    border: 2px solid #ccc; 
+    border: 2px solid #ccc;
     margin: 0 25px 0 25px;
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .seccionOfertas h2 {
-    text-align: center; 
-    font-size: 2rem; 
-    margin-bottom: 20px; 
-    color: #333; 
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 .sectionProductos {
     display: flex;
@@ -367,7 +422,7 @@ body {
 
 
 
-/* estilo alimentos.html */ 
+/* estilo alimentos.html */
 
 
 .tituloProducto {
@@ -386,8 +441,10 @@ body {
     padding: 20px;
     padding-left: 100px;
     padding-right: 100px;
-    justify-content: center;
+    justify-content: space-between;
+    align-content: center;
     padding-bottom: 20px;
+    
 }
 
 
@@ -399,6 +456,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    max-width: 450px;
+    justify-self: center;
+    width: 100%;
 }
 
 .contenedor-tarj:hover {
@@ -533,53 +593,106 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
 .mainNosotros {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px 100px;
 }
 
-.contenedorTitulo{
+.contenedorTitulo {
     height: 7vh;
 }
 
-main .quienesSomos{
-    display: flex;
-    flex-direction: row;
-}
-
-.contenedorTitulo h2{
+.contenedorTitulo h2 {
     color: #333;
 }
 
-main .text p{
+
+
+.quienesSomos {
+    padding: 20px 20px;
     padding-left: 30px;
     font-size: 1.4rem;
     color: #555;
+    text-align: justify;
 }
 
-
-main .quienesSomos img{
+.quienesSomos img {
     width: 300px;
     height: 300px;
+    float: left;
+    margin: 0 40px 20px 0;
+    border-radius: 10px;
 }
 
-.nuestraHistoria{
+
+.nuestraHistoria {
     display: flex;
     flex-direction: column;
 }
 
-.nuestraHistoria h3{
+.nuestraHistoria h3 {
     align-self: center;
     padding: 20px 0 20px 0;
     font-size: 1.6rem;
     color: #333;
 }
 
-.nuestraHistoria p{
+.nuestraHistoria p {
+    text-align: justify;
     font-size: 1.4rem;
     color: #555;
 }
+@media (max-width: 414px) {
+    .mainNosotros {
+        padding: 10px;
+    }
+
+    .contenedorTitulo {
+        height: auto;
+    }
+
+    .contenedorTitulo h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    main .quienesSomos {
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+
+    main .quienesSomos img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        float: none;
+        margin-right: 0;
+    }
+
+    main  p {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .nuestraHistoria {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nuestraHistoria h3 {
+        font-size: 1.4rem;
+    }
+
+    .nuestraHistoria p {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+}
 
 
+
+// estilos encuentranos.html
 
 .mainEncuentranos {
     display: flex;
@@ -661,7 +774,6 @@ main .quienesSomos img{
     transition: color 0.3s ease;
 }
 
-
 .enlacesRedes p {
     font-size: 1rem;
     color: #555;
@@ -677,10 +789,64 @@ main .quienesSomos img{
 }
 
 
+@media (max-width: 620px) {
+    .mainEncuentranos {
+        padding: 10px;
+    }
 
-  /* Responsive styles */
+    .dondeEstamos {
+        height: auto;
+    }
+
+    .dondeEstamos h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .mainEncuentranos iframe {
+        align-self: center;
+        width: 80%;
+        height: 200px;
+    }
+
+    .imgLocal {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .imgLocal img {
+        height: 300px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .pUbicacion p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .redes h3 {
+        font-size: 1.2rem;
+    }
+
+    .enlacesRedes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .enlacesRedes a {
+        font-size: 1.5rem;
+    }
+
+    .enlacesRedes p {
+        font-size: 0.9rem;
+    }
+}
+
+
   @media (max-width: 768px) {
-    
+
     body{
         width: 100% !important;
     }
@@ -690,13 +856,13 @@ main .quienesSomos img{
       height: auto;
       padding: 10px 3vw;
     }
-  
+
      .nav-principal {
       flex-direction: row-reverse;
       margin-top: 10px;
-      
+
     }
-  
+
     .containerBuscador {
       display: none;
     }
@@ -755,7 +921,7 @@ main .quienesSomos img{
         width: 100%;
         height: auto;
     }
-    
+
     /* estilos grilla en bebida.html */
 
     .grilla-productos {
@@ -811,18 +977,13 @@ main .quienesSomos img{
         padding-right: 20px;
 
     }
-    .section-info{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        gap: 20px;
-    }
+    
     .sectionProductos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        width: 100%;
+        max-width: 900px;
     }
     .itemsProductos {
         width: 90%;
@@ -830,13 +991,53 @@ main .quienesSomos img{
 }
 
 @media (max-width: 620px) {
+    .seccionOfertas {
+        justify-items: center;
+        align-items: center;
+    }
     .sectionProductos {
         grid-template-columns: 1fr !important;
-        justify-items: center;
         gap: 10px;
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
     }
     .itemsProductos {
-        width: 70%;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .section-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-info {
+        grid-template-columns: 1fr;
+    }
+
+    .section-info .tarjetas {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .section-info .tarjetas i {
+        font-size: 2rem;
+    }
+
+    .section-info .tarjetas h4 {
+        font-size: 1rem;
+    }
+
+    .section-info .tarjetas p {
+        font-size: 0.9rem;
     }
 }
 
@@ -850,6 +1051,6 @@ main .quienesSomos img{
         margin-left: 10px !important;
         margin-bottom: 5px;
     }
-    
+
 
 }
