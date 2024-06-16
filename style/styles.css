@@ -28,7 +28,6 @@ body {
   height: 120px;
   padding: 5px 3vw;
 }
-
 .header .logo img {
   height: 100px;
   width: auto;
@@ -45,18 +44,15 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .nav-principal a {
   text-decoration: none;
   color: #343a40;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .nav-principal a:hover {
   color: #fff;
 }
-
 .nav-principal img {
   width: 24px;
   height: 24px;
@@ -72,8 +68,7 @@ body {
   display: flex;
   align-items: center;
 }
-
-input.buscador {
+.containerBuscador .buscador {
   width: 350px;
   height: 40px;
   border-radius: 20px 0 0 20px;
@@ -84,12 +79,10 @@ input.buscador {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
 }
-
-input.buscador:focus {
+.containerBuscador .buscador:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.button {
+.containerBuscador .button {
   background-color: #8f4406;
   border: none;
   border-radius: 0 20px 20px 0;
@@ -102,22 +95,13 @@ input.buscador:focus {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-.button i {
-  color: #c28142;
-  font-size: 20px;
-}
-
-.button:hover {
+.containerBuscador .button:hover {
   background-color: #a85415;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.contenedor-navbar {
-  background-color: #8f4406;
-  display: flex;
-  flex-direction: row;
-  height: 7vh;
+.containerBuscador .button i {
+  color: #c28142;
+  font-size: 20px;
 }
 
 .posicion {
@@ -127,16 +111,14 @@ input.buscador:focus {
   width: 100%;
   z-index: 1000;
 }
-
-.navbar {
+.posicion .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease-in-out;
 }
-
-.navbar a {
+.posicion .navbar a {
   font-weight: bold;
   text-decoration: none;
   background-color: #c28142;
@@ -213,7 +195,6 @@ input.buscador:focus {
   padding: 20px;
   gap: 20px;
 }
-
 .section-info .tarjetas {
   display: flex;
   flex-direction: column;
@@ -228,12 +209,6 @@ input.buscador:focus {
   height: 180px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.section-info .tarjetas:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 .section-info .tarjetas i {
   color: #8f4406;
   margin-bottom: 10px;
@@ -242,15 +217,18 @@ input.buscador:focus {
   text-overflow: ellipsis;
   font-size: 2rem;
 }
-
 .section-info .tarjetas h4 {
   font-size: 1.2rem;
   margin: 0 0 5px;
 }
-
 .section-info .tarjetas p {
   font-size: 1rem;
   color: #555;
+}
+
+.section-info .tarjetas:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .section-info #tarjUno i {
@@ -435,11 +413,9 @@ input.buscador:focus {
   justify-self: center;
   width: 100%;
 }
-
 .contenedor-tarj:hover {
   transform: translateY(-10px);
 }
-
 .contenedor-tarj img {
   width: 100%;
   height: 170px;
@@ -447,19 +423,16 @@ input.buscador:focus {
   border-radius: 10px;
   margin-bottom: 15px;
 }
-
 .contenedor-tarj .info-producto h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 .contenedor-tarj .info-producto .precio {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 15px;
 }
-
 .contenedor-tarj button {
   background-color: #c28142;
   color: white;
@@ -475,7 +448,6 @@ input.buscador:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s ease;
 }
-
 .contenedor-tarj button:hover {
   background-color: #8f4406;
 }
@@ -492,13 +464,10 @@ footer {
   background-color: #561F10;
   color: white;
 }
-
-/* Estilos para el logo en el footer */
 footer .logoFooter {
   height: 150px;
   width: 150px;
 }
-
 footer .logoFooter img {
   height: 100%;
   width: 100%;
@@ -566,12 +535,10 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   align-items: center;
   padding: 20px 100px;
 }
-
-.contenedorTitulo {
+.mainNosotros .contenedorTitulo {
   height: 7vh;
 }
-
-.contenedorTitulo h2 {
+.mainNosotros .contenedorTitulo h2 {
   color: #333;
 }
 
@@ -582,7 +549,6 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   color: #555;
   text-align: justify;
 }
-
 .quienesSomos img {
   width: 300px;
   height: 300px;
@@ -595,14 +561,12 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   display: flex;
   flex-direction: column;
 }
-
 .nuestraHistoria h3 {
   align-self: center;
   padding: 20px 0 20px 0;
   font-size: 1.6rem;
   color: #333;
 }
-
 .nuestraHistoria p {
   text-align: justify;
   font-size: 1.4rem;
@@ -654,19 +618,16 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   padding: 20px 100px;
   background-color: #f9f9f9;
 }
-
-.dondeEstamos {
+.mainEncuentranos .dondeEstamos {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 7vh;
 }
-
-.dondeEstamos h2 {
+.mainEncuentranos .dondeEstamos h2 {
   font-size: 2rem;
   color: #333;
 }
-
 .mainEncuentranos iframe {
   width: 100%;
   height: 400px;
@@ -674,61 +635,52 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   border: none;
   margin: 20px 0;
 }
-
-.imgLocal {
+.mainEncuentranos .imgLocal {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin: 20px 0;
 }
-
-.imgLocal img {
+.mainEncuentranos .imgLocal img {
   width: 400px;
   height: auto;
   border-radius: 15px;
   object-fit: cover;
 }
-
-.pUbicacion p {
+.mainEncuentranos .pUbicacion p {
   font-size: 1.2rem;
   color: #555;
   text-align: center;
   margin: 20px 0;
 }
-
-.redes {
+.mainEncuentranos .redes {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
 }
-
-.redes h3 {
+.mainEncuentranos .redes h3 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 20px;
 }
-
-.enlacesRedes {
+.mainEncuentranos .redes .enlacesRedes {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
-
-.enlacesRedes div {
+.mainEncuentranos .redes .enlacesRedes div {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
-.enlacesRedes a {
+.mainEncuentranos .redes .enlacesRedes a {
   font-size: 2rem;
   color: #333;
   transition: color 0.3s ease;
 }
-
-.enlacesRedes p {
+.mainEncuentranos .redes .enlacesRedes p {
   font-size: 1rem;
   color: #555;
   margin-top: 10px;
