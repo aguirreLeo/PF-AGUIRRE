@@ -218,6 +218,8 @@ body {
   font-size: 2rem;
 }
 .section-info .tarjetas h4 {
+  font-family: "chocolates";
+  font-weight: bold;
   font-size: 1.2rem;
   margin: 0 0 5px;
 }
@@ -329,6 +331,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.tituloProducto h2 {
+  font-family: "chocolates";
+  font-weight: bold;
 }
 
 .grilla-productos {
@@ -480,6 +486,8 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   height: 7vh;
 }
 .mainNosotros .contenedorTitulo h2 {
+  font-family: "chocolates";
+  font-weight: bold;
   color: #333;
 }
 
@@ -503,6 +511,8 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   flex-direction: column;
 }
 .nuestraHistoria h3 {
+  font-family: "chocolates";
+  font-weight: bold;
   align-self: center;
   padding: 20px 0 20px 0;
   font-size: 1.6rem;
@@ -566,6 +576,8 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   height: 7vh;
 }
 .mainEncuentranos .dondeEstamos h2 {
+  font-family: "chocolates";
+  font-weight: bold;
   font-size: 2rem;
   color: #333;
 }
@@ -601,6 +613,8 @@ footer .informacion ul li a::before, footer .contacto ul li a::before {
   margin: 20px 0;
 }
 .mainEncuentranos .redes h3 {
+  font-family: "chocolates";
+  font-weight: bold;
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 20px;
